@@ -1,7 +1,7 @@
 .banner {
   margin-top: -10vh;
-  height: 80vh;
-  margin-bottom: -80;
+  /* height: 80vh; */
+  margin-bottom: -80PX;
   color: white;
   object-fit: contain;
 }
