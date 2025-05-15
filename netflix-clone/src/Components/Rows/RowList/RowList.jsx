@@ -1,15 +1,14 @@
-import React from 'react'
-import Row from '../Row/Row'
-import requests from '../../../utils/requests';
+import React from "react";
+import Row from "../Row/Row";
+import requests from "../../../utils/requests";
 
 const RowList = () => {
   return (
     <>
-   
       <Row
         title="NETFLIX ORIGINALS"
         fetchUrl={requests.fetchNetflixOriginals}
-         isLargeRow = {true}
+        isLargeRow={true}
       />
       <Row title="Trending" fetchUrl={requests.fetchTrending} isLargeRow />
       <Row
@@ -30,7 +29,7 @@ const RowList = () => {
       <Row
         title="Horror Movies"
         fetchUrl={requests.fetchHorrorMovies}
-        isLargeRow 
+        isLargeRow
       />
       <Row
         title="Romance Movies"
@@ -46,6 +45,6 @@ const RowList = () => {
       />
     </>
   );
-}
+};
 
-export default RowList
+export default RowList;
