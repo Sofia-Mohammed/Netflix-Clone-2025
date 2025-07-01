@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.css";
 import NetflixLogo from "../../assets/images/Netflix-Logo.png";
 import SearchIcon from "@mui/icons-material/Search";
@@ -7,11 +7,17 @@ import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
   return (
     <div className="header_outer_container">
       <div className="header_container">
         <div className="header_left">
-          <ul>
+          <ul className={menuOpen ? "nav_links open" : "nav_links"}>
             <li>
               <img src={NetflixLogo} alt="Netflix Logo" width="100" />
             </li>
@@ -34,6 +40,11 @@ function Header() {
               <a href="#">Browse by Languages</a>
             </li>
           </ul>
+          <div className="hamburger" onClick={handleMenuToggle}>
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
         </div>
         <div className="header-right">
           <ul>
